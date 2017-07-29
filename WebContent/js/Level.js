@@ -53,39 +53,39 @@ Level.prototype.create = function() {
 // -- user code here --
 Level.prototype.update = function() {
 
-	this.physics.arcade.collide(this.scene.fZelda, this.scene.fCollisionLayer);
+	this.physics.arcade.collide(this.scene.fRobin, this.scene.fCollisionLayer);
 
 	if (this.cursors.left.isDown) {
 		console.log('moveLeft');
 		// move to the left
-		this.scene.fZelda.body.velocity.x = -50;
+		this.scene.fRobin.body.velocity.x = -50;
 	} else if (this.cursors.right.isDown) {
 		console.log('moveRight');
 		// move to the right
-		this.scene.fZelda.body.velocity.x = 50;
+		this.scene.fRobin.body.velocity.x = 50;
 	} else if (this.cursors.up.isDown) {
 		console.log('moveUp');
-		this.scene.fZelda.body.velocity.y = -50;
+		this.scene.fRobin.body.velocity.y = -50;
 
 	}  else if (this.cursors.down.isDown) {
 		console.log('moveDown');
-		this.scene.fZelda.play("moveDown");
-		this.scene.fZelda.body.velocity.y = 50;
+		this.scene.fRobin.play("moveDown");
+		this.scene.fRobin.body.velocity.y = 50;
 	} else {
 		
 		console.log('stopMove');
-		this.scene.fZelda.play("iddle");
-		this.scene.fZelda.body.velocity.x = 0;
-		this.scene.fZelda.body.velocity.y = 0;
+		this.scene.fRobin.play("iddle");
+		this.scene.fRobin.body.velocity.x = 0;
+		this.scene.fRobin.body.velocity.y = 0;
 	}
 	
 	// update the facing of the player
 	if (this.cursors.down.isDown) {
 	    // face left
-	    this.scene.fZelda.scale.x = 1;
+	    //this.scene.fRobin.scale.x = 1;
 	} else if (this.cursors.down.isDown) {
 	   // face right
-	   this.scene.fZelda.scale.x = -1;
+	   //this.scene.fRobin.scale.x = -1;
 	}
 
 	// a flag to know if the player is (down) touching the platforms

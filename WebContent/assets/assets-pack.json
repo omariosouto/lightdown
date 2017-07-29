@@ -33,10 +33,20 @@
       "key": "physics",
       "url": "assets/assets-pack.json",
       "format": "LIME_CORONA_JSON"
+    },
+    {
+      "type": "spritesheet",
+      "key": "robin",
+      "url": "assets/images/sprite_robo.png",
+      "frameWidth": 200,
+      "frameHeight": 200,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
     }
   ],
   "meta": {
-    "generated": "1501312599070",
+    "generated": "1501347416250",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

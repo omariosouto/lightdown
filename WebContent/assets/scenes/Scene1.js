@@ -21,8 +21,13 @@ function Scene1(aGame, aParent, aName, aAddToStage, aEnableBody, aPhysicsBodyTyp
 	var _bggeral = this.game.add.sprite(-121, -155, 'bggeral', null, this);
 	_bggeral.animations.add('walk', [], 4, false);
 	
+	var _robin = this.game.add.sprite(32, 24, 'robin', 2, this);
+	_robin.scale.setTo(0.5, 0.5);
+	this.game.physics.arcade.enable(_robin);
+	_robin.body.setSize(118.0555648803711, 172.2222137451172, 36.111106872558594, 19.444442749023438);
+	
 	var _zelda = this.game.add.sprite(25, 13, 'zelda', 0, this);
-	_zelda.animations.add('moveDown', [15], 2, true);
+	_zelda.animations.add('moveDown', [15, 19], 2, true);
 	this.game.physics.arcade.enable(_zelda);
 	_zelda.body.setSize(16.12386703491211, 17.092897415161133);
 	_zelda.body.collideWorldBounds = true;
@@ -33,6 +38,7 @@ function Scene1(aGame, aParent, aName, aAddToStage, aEnableBody, aPhysicsBodyTyp
 	
 	// public fields
 	
+	this.fRobin = _robin;
 	this.fZelda = _zelda;
 	this.fCollisionLayer = _collisionLayer;
 	

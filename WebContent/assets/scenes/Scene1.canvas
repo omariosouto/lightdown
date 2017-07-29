@@ -58,8 +58,28 @@
             },
             {
               "type": "spritesheet",
-              "id": "64cf29a9-4433-4e48-9a30-a1a2d39929e7",
+              "id": "b0873826-0464-4d9b-a326-6fdb77619c10",
               "asset": "1",
+              "info": {
+                "editorName": "robin",
+                "editorPublic": true,
+                "x": 32,
+                "y": 24,
+                "scale.x": 0.5,
+                "scale.y": 0.5,
+                "body": {
+                  "type": "ARCADE_RECT",
+                  "offsetX": 36.111106872558594,
+                  "offsetY": 19.444442749023438,
+                  "width": 118.0555648803711,
+                  "height": 172.2222137451172
+                }
+              }
+            },
+            {
+              "type": "spritesheet",
+              "id": "64cf29a9-4433-4e48-9a30-a1a2d39929e7",
+              "asset": "2",
               "info": {
                 "editorName": "zelda",
                 "editorPublic": true,
@@ -69,7 +89,10 @@
                   "name": "moveDown",
                   "frameRate": 2,
                   "loop": true,
-                  "frames": ["15"]
+                  "frames": [
+                    "15",
+                    "19"
+                  ]
                 }],
                 "body": {
                   "type": "ARCADE_RECT",
@@ -89,7 +112,7 @@
                 "children": [{
                   "type": "atlas-sprite",
                   "id": "028ba891-1322-42e7-a882-298e76cb41fb",
-                  "asset": "2",
+                  "asset": "3",
                   "info": {
                     "editorName": "player_mario",
                     "x": -1,
@@ -113,10 +136,16 @@
     "1": {
       "file": "WebContent/assets/assets-pack.json",
       "section": "level",
+      "asset": "robin",
+      "sprite": "2"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
       "asset": "zelda",
       "sprite": "0"
     },
-    "2": {
+    "3": {
       "file": "WebContent/assets/assets-pack.json",
       "section": "level",
       "asset": "texturasdojogo",
