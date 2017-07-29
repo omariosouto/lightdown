@@ -1,0 +1,127 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "Scene1",
+    "sceneWidth": 640,
+    "sceneHeight": 360,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.Group",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true
+  },
+  "stateSettings": {
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "a9bbf5d2-98a2-49ad-855b-3aaa4c480b0d",
+    "info": {
+      "editorName": "Scene1",
+      "children": [{
+        "type": "group",
+        "id": "157e616b-ea71-4c65-b350-70833423e66a",
+        "info": {
+          "editorName": "group",
+          "children": [
+            {
+              "type": "image",
+              "id": "84adab09-690c-4044-9c22-aeda7cec193e",
+              "asset": "0",
+              "info": {
+                "editorName": "bggeral",
+                "x": -121,
+                "y": -155,
+                "animations": [{
+                  "name": "walk",
+                  "frameRate": 4,
+                  "frames": []
+                }]
+              }
+            },
+            {
+              "type": "spritesheet",
+              "id": "64cf29a9-4433-4e48-9a30-a1a2d39929e7",
+              "asset": "1",
+              "info": {
+                "editorName": "zelda",
+                "editorPublic": true,
+                "x": 25,
+                "y": 13,
+                "animations": [{
+                  "name": "moveDown",
+                  "frameRate": 2,
+                  "loop": true,
+                  "frames": ["15"]
+                }],
+                "body": {
+                  "type": "ARCADE_RECT",
+                  "collideWorldBounds": true,
+                  "width": 16.12386703491211,
+                  "height": 17.092897415161133
+                }
+              }
+            },
+            {
+              "type": "group",
+              "id": "b5b06c95-76cc-4505-805f-c761e1ef5766",
+              "info": {
+                "editorName": "collisionLayer",
+                "editorPublic": true,
+                "physicsGroup": true,
+                "children": [{
+                  "type": "atlas-sprite",
+                  "id": "028ba891-1322-42e7-a882-298e76cb41fb",
+                  "asset": "2",
+                  "info": {
+                    "editorName": "player_mario",
+                    "x": -1,
+                    "y": 169
+                  }
+                }]
+              }
+            }
+          ]
+        }
+      }]
+    }
+  },
+  "type": "GROUP",
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "bggeral"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "zelda",
+      "sprite": "0"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "texturasdojogo",
+      "sprite": "player-mario"
+    }
+  },
+  "prefab-table": {}
+}

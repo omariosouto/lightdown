@@ -1,0 +1,45 @@
+{
+  "level": [
+    {
+      "type": "spritesheet",
+      "key": "zelda",
+      "url": "assets/images/player-zelda.png",
+      "frameWidth": 20,
+      "frameHeight": 20,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 10
+    },
+    {
+      "type": "image",
+      "key": "bggeral",
+      "url": "assets/images/bggeral.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "Scene1",
+      "url": "assets/scenes/Scene1.js"
+    },
+    {
+      "type": "atlas",
+      "key": "texturasdojogo",
+      "textureURL": "assets/texturas/texturasdojogo.png",
+      "atlasURL": "assets/texturas/texturasdojogo.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "physics",
+      "key": "physics",
+      "url": "assets/assets-pack.json",
+      "format": "LIME_CORONA_JSON"
+    }
+  ],
+  "meta": {
+    "generated": "1501312599070",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}

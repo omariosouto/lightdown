@@ -1,0 +1,69 @@
+{
+  "frames": {
+    "bg": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 374,
+        "w": 1545,
+        "h": 1441
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1545,
+        "h": 1441
+      },
+      "sourceSize": {
+        "w": 1545,
+        "h": 1441
+      }
+    },
+    "player-mario": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 970,
+        "h": 370
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 970,
+        "h": 370
+      },
+      "sourceSize": {
+        "w": 970,
+        "h": 370
+      }
+    },
+    "player-zelda": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 974,
+        "y": 69,
+        "w": 432,
+        "h": 303
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 432,
+        "h": 303
+      },
+      "sourceSize": {
+        "w": 432,
+        "h": 303
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "texturasdojogo.png"
+  }
+}
