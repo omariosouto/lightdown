@@ -43,17 +43,11 @@
           "children": [
             {
               "type": "image",
-              "id": "84adab09-690c-4044-9c22-aeda7cec193e",
+              "id": "723645b5-7bbd-48c1-b2d2-9623f77681fa",
               "asset": "0",
               "info": {
-                "editorName": "bggeral",
-                "x": -121,
-                "y": -155,
-                "animations": [{
-                  "name": "walk",
-                  "frameRate": 4,
-                  "frames": []
-                }]
+                "editorName": "level",
+                "editorPublic": true
               }
             },
             {
@@ -63,42 +57,40 @@
               "info": {
                 "editorName": "robin",
                 "editorPublic": true,
-                "x": 32,
-                "y": 24,
-                "scale.x": 0.5,
-                "scale.y": 0.5,
+                "x": 57,
+                "y": 8,
+                "animations": [
+                  {
+                    "name": "moveUp",
+                    "frameRate": 60,
+                    "loop": true,
+                    "frames": ["1"]
+                  },
+                  {
+                    "name": "moveLeft",
+                    "frameRate": 60,
+                    "loop": true,
+                    "frames": ["3"]
+                  },
+                  {
+                    "name": "moveDown",
+                    "frameRate": 60,
+                    "loop": true,
+                    "frames": ["2"]
+                  },
+                  {
+                    "name": "moveRight",
+                    "frameRate": 60,
+                    "loop": true,
+                    "frames": ["0"]
+                  }
+                ],
                 "body": {
                   "type": "ARCADE_RECT",
-                  "offsetX": 36.111106872558594,
-                  "offsetY": 19.444442749023438,
-                  "width": 118.0555648803711,
-                  "height": 172.2222137451172
-                }
-              }
-            },
-            {
-              "type": "spritesheet",
-              "id": "64cf29a9-4433-4e48-9a30-a1a2d39929e7",
-              "asset": "2",
-              "info": {
-                "editorName": "zelda",
-                "editorPublic": true,
-                "x": 25,
-                "y": 13,
-                "animations": [{
-                  "name": "moveDown",
-                  "frameRate": 2,
-                  "loop": true,
-                  "frames": [
-                    "15",
-                    "19"
-                  ]
-                }],
-                "body": {
-                  "type": "ARCADE_RECT",
-                  "collideWorldBounds": true,
-                  "width": 16.12386703491211,
-                  "height": 17.092897415161133
+                  "offsetX": 8.333335876464844,
+                  "offsetY": 6.25,
+                  "width": 36.25,
+                  "height": 45.97222137451172
                 }
               }
             },
@@ -109,16 +101,634 @@
                 "editorName": "collisionLayer",
                 "editorPublic": true,
                 "physicsGroup": true,
+                "children": [
+                  {
+                    "type": "image",
+                    "id": "beff08c0-fce7-47f7-a13b-2c1dc6f8e021",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao1",
+                      "x": 112,
+                      "y": 20,
+                      "scale.x": 89.82846591483488,
+                      "scale.y": 1.1970665779688725
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "e20618ed-703e-4e5a-a6d1-b3ec8ad9d88f",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao",
+                      "x": 110,
+                      "y": 21,
+                      "scale.x": 1.099206059869723,
+                      "scale.y": 9.134920304366515
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "a173f2cc-8235-4433-b3c1-e1e1c1e688a6",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao2",
+                      "x": 181,
+                      "y": 27,
+                      "scale.x": 0.8464333507633354,
+                      "scale.y": 8.678244612960125
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "63b2d501-3074-4036-8c7f-a620a1b79ed8",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao8",
+                      "x": 253,
+                      "y": 89,
+                      "scale.x": 1.0000019640265556,
+                      "scale.y": 18.883149980522177
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "bfa17f2f-77d4-4228-853c-060e3fad2cfc",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao7",
+                      "x": 59,
+                      "y": 158,
+                      "scale.x": 17.54077965602307
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "af3cf148-6fb5-40df-85e6-e845026b5f43",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao10",
+                      "x": 390,
+                      "y": 88,
+                      "scale.y": 29.53152046633867
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "e595a324-850c-41b5-beb5-b6bff00b62b5",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao6",
+                      "x": 113,
+                      "y": 158,
+                      "scale.x": 1.1528472900390625,
+                      "scale.y": 20.16395222657639
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "b400653f-80b9-4228-84b9-66d5193238fb",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao5",
+                      "x": 184,
+                      "y": 159,
+                      "scale.x": 0.7051566181467456,
+                      "scale.y": 8.665958654223637
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "b0caae14-e12f-4717-ad52-bc2a84b36b99",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao4",
+                      "x": 182,
+                      "y": 220,
+                      "scale.x": 20.7545893501823
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "11862427-8627-43c8-933b-2b84e1a5d3fe",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao3",
+                      "x": 47,
+                      "y": 20,
+                      "scale.x": 1.326046334021033,
+                      "scale.y": 82.1947980374307
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "9b133e8a-b14e-4e0b-84d6-224c6461ddaf",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao11",
+                      "x": 119,
+                      "y": 294,
+                      "scale.x": 18.704827107498755,
+                      "scale.y": 1.1273716517857142
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "9d6c1562-acbf-47a8-82b1-1c5a4cff5997",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao12",
+                      "x": 246,
+                      "y": 292,
+                      "scale.x": 1.1273716646123577,
+                      "scale.y": 10.935085919005795
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "a219cf1f-e858-4336-81ec-dea168f93043",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao13",
+                      "x": 393,
+                      "y": 158,
+                      "scale.x": 10.170845452981213,
+                      "scale.y": 1.0000000523099126
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "9cf4569b-2870-4e54-b5f9-6422a6565e61",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao14",
+                      "x": 332,
+                      "y": 368,
+                      "scale.x": 9.788726788029209,
+                      "scale.y": 1.1273760114397322
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "03df2236-ec94-4e9d-85b9-973571dccb08",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao15",
+                      "x": 327,
+                      "y": 432,
+                      "scale.x": 10.552965853213625,
+                      "scale.y": 0.872628407509728
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "cc891547-c8a1-44c8-b901-59c9e7abdffd",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao16",
+                      "x": 182,
+                      "y": 293,
+                      "scale.x": 1.242113214402087,
+                      "scale.y": 29.78912235664916
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "0d7b3568-7ad6-4903-8f6d-61fd314eb9f3",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao17",
+                      "x": 116,
+                      "y": 374,
+                      "scale.x": 1.1273738443554515,
+                      "scale.y": 19.851187775043076
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "6b2ce764-8478-420f-98db-1a8ead595a51",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao18",
+                      "x": 47,
+                      "y": 438,
+                      "scale.x": 10.077122267210765,
+                      "scale.y": 0.9415239270588996
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "29cb4665-cda5-4766-a16f-b94aaa59f5de",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao19",
+                      "x": 183,
+                      "y": 437,
+                      "scale.x": 10.645093844894637,
+                      "scale.y": 0.9311044136751135
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "d5ade9e8-516e-47a6-ba79-dfee7d73c6f2",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao20",
+                      "x": 184,
+                      "y": 504,
+                      "scale.x": 20.870164905616736,
+                      "scale.y": 0.8726283693150165
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "7dd701ff-50ad-470b-8e81-ec93e1d7da64",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao21",
+                      "x": 459,
+                      "y": 27,
+                      "scale.x": 0.9999998532788404,
+                      "scale.y": 19.2567762681205
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "943083cf-85c7-4b23-8bb0-bc75fba5004b",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao22",
+                      "x": 460,
+                      "y": 226,
+                      "scale.x": 1.000000016591559,
+                      "scale.y": 10.022242319621343
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "62ba9eb6-1c3c-44db-b223-d2e7831e669f",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao23",
+                      "x": 460,
+                      "y": 226,
+                      "scale.x": 10.871399035325632,
+                      "scale.y": 0.8938554821685418
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "37ee547f-f0b7-4b40-951d-68798f7cbc57",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao24",
+                      "x": 530,
+                      "y": 162,
+                      "scale.x": 0.9115469147904466,
+                      "scale.y": 29.835803085259663
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "eb63516e-20fd-428e-a6cc-056ee6fdae34",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao25",
+                      "x": 467,
+                      "y": 91,
+                      "scale.x": 29.45250487965269,
+                      "scale.y": 0.7788663548176311
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "3f77c1fe-7ede-48b9-b0aa-6cc1aa09ae60",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao26",
+                      "x": 601,
+                      "y": 91,
+                      "scale.x": 0.7051565899002903,
+                      "scale.y": 20.164899178918887
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "e879454c-1c05-4a29-a565-a26dd2ecbbc9",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao27",
+                      "x": 668,
+                      "y": 91,
+                      "scale.x": 0.9262869379715168,
+                      "scale.y": 19.943764933845127
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "c2f14026-d1dd-443c-994d-a8c3dccf463c",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao28",
+                      "x": 531,
+                      "y": 300,
+                      "scale.x": 10.552961319901533,
+                      "scale.y": 1.2122890008015583
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "927098d7-1ae7-4da4-8a19-4b1f8e35fbb4",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao29",
+                      "x": 600,
+                      "y": 309,
+                      "scale.x": 1.2122890696251338,
+                      "scale.y": 19.575208101368535
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "09e66587-224c-4885-aca1-85f448e1d101",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao30",
+                      "x": 461,
+                      "y": 440,
+                      "scale.x": 20.31821500904696,
+                      "scale.y": 1.3184334768523607
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "e6899541-2a90-4c92-bfe4-d3a2b59f5320",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao31",
+                      "x": 461,
+                      "y": 371,
+                      "scale.x": 0.7877152921995423,
+                      "scale.y": 19.681352584121885
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "21c8b6dd-5d95-4622-a180-1cda8639c44b",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao32",
+                      "x": 388,
+                      "y": 503,
+                      "scale.x": 11.932839620082543
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "39ca098a-cfe9-4e78-b258-974fdb3efb9c",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao33",
+                      "x": 672,
+                      "y": 299,
+                      "scale.x": 0.89385986328125,
+                      "scale.y": 10.659109343171862
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "559b7b25-7804-4348-afd0-80e93b9c9ebc",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao34",
+                      "x": 529,
+                      "y": 450,
+                      "scale.x": 1.1061400816351266,
+                      "scale.y": 18.619912277865442
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "a45fb71d-9291-4a2b-8a8b-cf42a9047c82",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao35",
+                      "x": 605,
+                      "y": 507,
+                      "scale.x": 10.128391691041642
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "dedb31e0-f49e-48be-b2c6-207b755181ec",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao36",
+                      "x": 62,
+                      "y": 575,
+                      "scale.x": 88.17757869988921,
+                      "scale.y": 1.1865932591735304
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "7f0770a1-9637-4b82-b146-decab0d7af08",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao37",
+                      "x": 668,
+                      "y": 512,
+                      "scale.y": 9.253766935182695
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "a2917f34-7dd5-47d4-9246-d11309c8359b",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao38",
+                      "x": 670,
+                      "y": 438,
+                      "scale.x": 10.765250020810845,
+                      "scale.y": 0.8938555424670895
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "1303044e-f833-4b53-bf4d-d67878e224bc",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao39",
+                      "x": 673,
+                      "y": 369,
+                      "scale.x": 10.464512615713858,
+                      "scale.y": 0.5577349247573704
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "7c765975-53ce-4c9c-93ec-393bd10630d8",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao40",
+                      "x": 739,
+                      "y": 22,
+                      "scale.x": 1.2122889655529259,
+                      "scale.y": 79.33430768823463
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "id": "e1f3d49a-f19f-45f2-90b7-5717a3ec0181",
+                    "asset": "2",
+                    "info": {
+                      "editorName": "colisao9",
+                      "x": 324,
+                      "y": 88,
+                      "scale.x": 1.1273716478643874,
+                      "scale.y": 49.529061360699345
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "group",
+              "id": "3e7b06b2-05ad-46ae-8b80-3648566866e8",
+              "info": {
+                "editorName": "energy",
+                "editorPublic": true,
+                "physicsGroup": true,
+                "children": [
+                  {
+                    "type": "spritesheet",
+                    "id": "497d10b1-f4cd-4edb-8342-0937a1d06d7f",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda",
+                      "x": 148,
+                      "y": 104
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
+                    "id": "81a8ab05-7333-43be-a659-9daa1189b7f9",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda1",
+                      "x": 495,
+                      "y": 146
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
+                    "id": "bcdc3757-393c-46e7-be7c-3c21f4e8ff65",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda2",
+                      "x": 488,
+                      "y": 323
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
+                    "id": "7f927297-169c-442a-a58b-6a8824e82c5b",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda4",
+                      "x": 74,
+                      "y": 317
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
+                    "id": "6c5730e0-9b35-4819-a016-cec082871fac",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda5",
+                      "x": 298,
+                      "y": 452
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
+                    "id": "e8c26989-70e4-4b78-93f5-b4399357ea7e",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda6",
+                      "x": 421,
+                      "y": 54
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
+                    "id": "6b57ba66-a9c8-4506-8f68-3fd65bd762d4",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda8",
+                      "x": 564,
+                      "y": 524
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
+                    "id": "7a91f311-3c32-4066-963b-58cdb6db6232",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda9",
+                      "x": 504,
+                      "y": 53
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "group",
+              "id": "87298381-3d38-4f75-8ece-630802c5f239",
+              "info": {
+                "editorName": "portal",
+                "editorPublic": true,
+                "physicsGroup": true,
                 "children": [{
-                  "type": "atlas-sprite",
-                  "id": "028ba891-1322-42e7-a882-298e76cb41fb",
-                  "asset": "3",
+                  "type": "spritesheet",
+                  "id": "db2cdb2a-b56c-4398-86d4-7e8c46bc0dc8",
+                  "asset": "4",
                   "info": {
-                    "editorName": "player_mario",
-                    "x": -1,
-                    "y": 169
+                    "editorName": "zelda7",
+                    "x": 70,
+                    "y": 181,
+                    "alpha": 0
                   }
                 }]
+              }
+            },
+            {
+              "type": "group",
+              "id": "ab40a5a7-2102-459e-90c1-d09e15396bfc",
+              "info": {
+                "editorName": "key",
+                "editorPublic": true,
+                "physicsGroup": true,
+                "children": [{
+                  "type": "spritesheet",
+                  "id": "d90b0c1a-e45d-4129-8eb6-858155670152",
+                  "asset": "5",
+                  "info": {
+                    "editorName": "zelda3",
+                    "x": 698,
+                    "y": 531
+                  }
+                }]
+              }
+            },
+            {
+              "type": "spritesheet",
+              "id": "b7b268b7-06a0-44a5-ab5e-f088e23cb736",
+              "asset": "3",
+              "info": {
+                "editorName": "zelda10",
+                "x": 74,
+                "y": 466
               }
             }
           ]
@@ -131,7 +741,7 @@
     "0": {
       "file": "WebContent/assets/assets-pack.json",
       "section": "level",
-      "asset": "bggeral"
+      "asset": "level1"
     },
     "1": {
       "file": "WebContent/assets/assets-pack.json",
@@ -142,14 +752,25 @@
     "2": {
       "file": "WebContent/assets/assets-pack.json",
       "section": "level",
-      "asset": "zelda",
-      "sprite": "0"
+      "asset": "colisao"
     },
     "3": {
       "file": "WebContent/assets/assets-pack.json",
       "section": "level",
-      "asset": "texturasdojogo",
-      "sprite": "player-mario"
+      "asset": "zelda",
+      "sprite": "0"
+    },
+    "4": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "zelda",
+      "sprite": "8"
+    },
+    "5": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "zelda",
+      "sprite": "4"
     }
   },
   "prefab-table": {}

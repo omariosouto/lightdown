@@ -38,15 +38,44 @@
       "type": "spritesheet",
       "key": "robin",
       "url": "assets/images/sprite_robo.png",
-      "frameWidth": 200,
-      "frameHeight": 200,
+      "frameWidth": 55,
+      "frameHeight": 55,
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "level1",
+      "url": "assets/images/level1 (1).png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "colisao",
+      "url": "assets/images/quadrado_vermelho.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "restart",
+      "url": "assets/scenes/restart.js"
+    },
+    {
+      "type": "audio",
+      "key": "musica1",
+      "urls": ["assets/songs/musica-inicial.mp3"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "musica2",
+      "urls": ["assets/songs/musica2.mp3"],
+      "autoDecode": true
     }
   ],
   "meta": {
-    "generated": "1501347416250",
+    "generated": "1501383424867",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

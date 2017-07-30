@@ -18,29 +18,178 @@
 function Scene1(aGame, aParent, aName, aAddToStage, aEnableBody, aPhysicsBodyType) {
 	
 	Phaser.Group.call(this, aGame, aParent, aName, aAddToStage, aEnableBody, aPhysicsBodyType);
-	var _bggeral = this.game.add.sprite(-121, -155, 'bggeral', null, this);
-	_bggeral.animations.add('walk', [], 4, false);
+	var _level = this.game.add.sprite(0, 0, 'level1', null, this);
 	
-	var _robin = this.game.add.sprite(32, 24, 'robin', 2, this);
-	_robin.scale.setTo(0.5, 0.5);
+	var _robin = this.game.add.sprite(57, 8, 'robin', 2, this);
+	_robin.animations.add('moveUp', [1], 60, true);
+	_robin.animations.add('moveLeft', [3], 60, true);
+	_robin.animations.add('moveDown', [2], 60, true);
+	_robin.animations.add('moveRight', [0], 60, true);
 	this.game.physics.arcade.enable(_robin);
-	_robin.body.setSize(118.0555648803711, 172.2222137451172, 36.111106872558594, 19.444442749023438);
-	
-	var _zelda = this.game.add.sprite(25, 13, 'zelda', 0, this);
-	_zelda.animations.add('moveDown', [15, 19], 2, true);
-	this.game.physics.arcade.enable(_zelda);
-	_zelda.body.setSize(16.12386703491211, 17.092897415161133);
-	_zelda.body.collideWorldBounds = true;
+	_robin.body.setSize(36.25, 45.97222137451172, 8.333335876464844, 6.25);
 	
 	var _collisionLayer = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
 	
-	this.game.add.sprite(-1, 169, 'texturasdojogo', 'player-mario', _collisionLayer);
+	var _colisao1 = this.game.add.sprite(112, 20, 'colisao', null, _collisionLayer);
+	_colisao1.scale.setTo(89.82846591483488, 1.1970665779688725);
+	
+	var _colisao = this.game.add.sprite(110, 21, 'colisao', null, _collisionLayer);
+	_colisao.scale.setTo(1.099206059869723, 9.134920304366515);
+	
+	var _colisao2 = this.game.add.sprite(181, 27, 'colisao', null, _collisionLayer);
+	_colisao2.scale.setTo(0.8464333507633354, 8.678244612960125);
+	
+	var _colisao8 = this.game.add.sprite(253, 89, 'colisao', null, _collisionLayer);
+	_colisao8.scale.setTo(1.0000019640265556, 18.883149980522177);
+	
+	var _colisao7 = this.game.add.sprite(59, 158, 'colisao', null, _collisionLayer);
+	_colisao7.scale.setTo(17.54077965602307, 1.0);
+	
+	var _colisao10 = this.game.add.sprite(390, 88, 'colisao', null, _collisionLayer);
+	_colisao10.scale.setTo(1.0, 29.53152046633867);
+	
+	var _colisao6 = this.game.add.sprite(113, 158, 'colisao', null, _collisionLayer);
+	_colisao6.scale.setTo(1.1528472900390625, 20.16395222657639);
+	
+	var _colisao5 = this.game.add.sprite(184, 159, 'colisao', null, _collisionLayer);
+	_colisao5.scale.setTo(0.7051566181467456, 8.665958654223637);
+	
+	var _colisao4 = this.game.add.sprite(182, 220, 'colisao', null, _collisionLayer);
+	_colisao4.scale.setTo(20.7545893501823, 1.0);
+	
+	var _colisao3 = this.game.add.sprite(47, 20, 'colisao', null, _collisionLayer);
+	_colisao3.scale.setTo(1.326046334021033, 82.1947980374307);
+	
+	var _colisao11 = this.game.add.sprite(119, 294, 'colisao', null, _collisionLayer);
+	_colisao11.scale.setTo(18.704827107498755, 1.1273716517857142);
+	
+	var _colisao12 = this.game.add.sprite(246, 292, 'colisao', null, _collisionLayer);
+	_colisao12.scale.setTo(1.1273716646123577, 10.935085919005795);
+	
+	var _colisao13 = this.game.add.sprite(393, 158, 'colisao', null, _collisionLayer);
+	_colisao13.scale.setTo(10.170845452981213, 1.0000000523099126);
+	
+	var _colisao14 = this.game.add.sprite(332, 368, 'colisao', null, _collisionLayer);
+	_colisao14.scale.setTo(9.788726788029209, 1.1273760114397322);
+	
+	var _colisao15 = this.game.add.sprite(327, 432, 'colisao', null, _collisionLayer);
+	_colisao15.scale.setTo(10.552965853213625, 0.872628407509728);
+	
+	var _colisao16 = this.game.add.sprite(182, 293, 'colisao', null, _collisionLayer);
+	_colisao16.scale.setTo(1.242113214402087, 29.78912235664916);
+	
+	var _colisao17 = this.game.add.sprite(116, 374, 'colisao', null, _collisionLayer);
+	_colisao17.scale.setTo(1.1273738443554515, 19.851187775043076);
+	
+	var _colisao18 = this.game.add.sprite(47, 438, 'colisao', null, _collisionLayer);
+	_colisao18.scale.setTo(10.077122267210765, 0.9415239270588996);
+	
+	var _colisao19 = this.game.add.sprite(183, 437, 'colisao', null, _collisionLayer);
+	_colisao19.scale.setTo(10.645093844894637, 0.9311044136751135);
+	
+	var _colisao20 = this.game.add.sprite(184, 504, 'colisao', null, _collisionLayer);
+	_colisao20.scale.setTo(20.870164905616736, 0.8726283693150165);
+	
+	var _colisao21 = this.game.add.sprite(459, 27, 'colisao', null, _collisionLayer);
+	_colisao21.scale.setTo(0.9999998532788404, 19.2567762681205);
+	
+	var _colisao22 = this.game.add.sprite(460, 226, 'colisao', null, _collisionLayer);
+	_colisao22.scale.setTo(1.000000016591559, 10.022242319621343);
+	
+	var _colisao23 = this.game.add.sprite(460, 226, 'colisao', null, _collisionLayer);
+	_colisao23.scale.setTo(10.871399035325632, 0.8938554821685418);
+	
+	var _colisao24 = this.game.add.sprite(530, 162, 'colisao', null, _collisionLayer);
+	_colisao24.scale.setTo(0.9115469147904466, 29.835803085259663);
+	
+	var _colisao25 = this.game.add.sprite(467, 91, 'colisao', null, _collisionLayer);
+	_colisao25.scale.setTo(29.45250487965269, 0.7788663548176311);
+	
+	var _colisao26 = this.game.add.sprite(601, 91, 'colisao', null, _collisionLayer);
+	_colisao26.scale.setTo(0.7051565899002903, 20.164899178918887);
+	
+	var _colisao27 = this.game.add.sprite(668, 91, 'colisao', null, _collisionLayer);
+	_colisao27.scale.setTo(0.9262869379715168, 19.943764933845127);
+	
+	var _colisao28 = this.game.add.sprite(531, 300, 'colisao', null, _collisionLayer);
+	_colisao28.scale.setTo(10.552961319901533, 1.2122890008015583);
+	
+	var _colisao29 = this.game.add.sprite(600, 309, 'colisao', null, _collisionLayer);
+	_colisao29.scale.setTo(1.2122890696251338, 19.575208101368535);
+	
+	var _colisao30 = this.game.add.sprite(461, 440, 'colisao', null, _collisionLayer);
+	_colisao30.scale.setTo(20.31821500904696, 1.3184334768523607);
+	
+	var _colisao31 = this.game.add.sprite(461, 371, 'colisao', null, _collisionLayer);
+	_colisao31.scale.setTo(0.7877152921995423, 19.681352584121885);
+	
+	var _colisao32 = this.game.add.sprite(388, 503, 'colisao', null, _collisionLayer);
+	_colisao32.scale.setTo(11.932839620082543, 1.0);
+	
+	var _colisao33 = this.game.add.sprite(672, 299, 'colisao', null, _collisionLayer);
+	_colisao33.scale.setTo(0.89385986328125, 10.659109343171862);
+	
+	var _colisao34 = this.game.add.sprite(529, 450, 'colisao', null, _collisionLayer);
+	_colisao34.scale.setTo(1.1061400816351266, 18.619912277865442);
+	
+	var _colisao35 = this.game.add.sprite(605, 507, 'colisao', null, _collisionLayer);
+	_colisao35.scale.setTo(10.128391691041642, 1.0);
+	
+	var _colisao36 = this.game.add.sprite(62, 575, 'colisao', null, _collisionLayer);
+	_colisao36.scale.setTo(88.17757869988921, 1.1865932591735304);
+	
+	var _colisao37 = this.game.add.sprite(668, 512, 'colisao', null, _collisionLayer);
+	_colisao37.scale.setTo(1.0, 9.253766935182695);
+	
+	var _colisao38 = this.game.add.sprite(670, 438, 'colisao', null, _collisionLayer);
+	_colisao38.scale.setTo(10.765250020810845, 0.8938555424670895);
+	
+	var _colisao39 = this.game.add.sprite(673, 369, 'colisao', null, _collisionLayer);
+	_colisao39.scale.setTo(10.464512615713858, 0.5577349247573704);
+	
+	var _colisao40 = this.game.add.sprite(739, 22, 'colisao', null, _collisionLayer);
+	_colisao40.scale.setTo(1.2122889655529259, 79.33430768823463);
+	
+	var _colisao9 = this.game.add.sprite(324, 88, 'colisao', null, _collisionLayer);
+	_colisao9.scale.setTo(1.1273716478643874, 49.529061360699345);
+	
+	var _energy = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
+	
+	this.game.add.sprite(148, 104, 'zelda', 0, _energy);
+	
+	this.game.add.sprite(495, 146, 'zelda', 0, _energy);
+	
+	this.game.add.sprite(488, 323, 'zelda', 0, _energy);
+	
+	this.game.add.sprite(74, 317, 'zelda', 0, _energy);
+	
+	this.game.add.sprite(298, 452, 'zelda', 0, _energy);
+	
+	this.game.add.sprite(421, 54, 'zelda', 0, _energy);
+	
+	this.game.add.sprite(564, 524, 'zelda', 0, _energy);
+	
+	this.game.add.sprite(504, 53, 'zelda', 0, _energy);
+	
+	var _portal = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
+	
+	var _zelda7 = this.game.add.sprite(70, 181, 'zelda', 8, _portal);
+	_zelda7.alpha = 0.0;
+	
+	var _key = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
+	
+	this.game.add.sprite(698, 531, 'zelda', 4, _key);
+	
+	this.game.add.sprite(74, 466, 'zelda', 0, this);
 	
 	// public fields
 	
+	this.fLevel = _level;
 	this.fRobin = _robin;
-	this.fZelda = _zelda;
 	this.fCollisionLayer = _collisionLayer;
+	this.fEnergy = _energy;
+	this.fPortal = _portal;
+	this.fKey = _key;
 	
 }
 

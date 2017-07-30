@@ -18,6 +18,9 @@ var Level_proto = Object.create(Phaser.State.prototype);
 Level.prototype = Level_proto;
 Level.prototype.constructor = Level;
 
+
+var tempoInicial = 1000 * 5;
+
 Level.prototype.init = function() {
 	console.log('Init do Level');
 
@@ -30,6 +33,8 @@ Level.prototype.init = function() {
 };
 
 Level.prototype.preload = function() {
+	// Habilita um temporizador mais bolado
+	this.time.advancedTiming = true;
 	console.log('Preload do Level');
 	this.load.pack("level", "assets/assets-pack.json");
 };
@@ -37,77 +42,159 @@ Level.prototype.preload = function() {
 Level.prototype.create = function() {
 	console.log('Create do Level adiciona as porra toda');
 	this.scene = new Scene1(this.game);
+	 // Habilita o primeiro timer com 5 segundos a partir de agora
+    this.endTime = this.time.now + (tempoInicial);
+    
+    
+    music = this.game.sound.play('musica1', 1, true);
 
 	// set the physics properties of the collision sprites
 	console.log(this.scene);
 	this.scene.fCollisionLayer.setAll("body.immovable", true);
 	this.scene.fCollisionLayer.setAll("body.allowGravity", false);
 	// hide all objects of the collision layer
-//	this.scene.fCollisionLayer.setAll("renderable", false);
+    this.scene.fCollisionLayer.setAll("renderable", false);
+    
+    
+    // to keep the fEnergy in the air
+    this.scene.fEnergy.setAll("body.allowGravity", false);
 
 	this.cursors = this.input.keyboard.createCursorKeys();
+	
+	this.game.time.create(false);
+	//this.game.time.events.add(Phaser.Timer.SECOND * 4, fadePicture, this);
+
+    console.log(this.game.time.events)
 
 };
+
+
+function fadePicture() {
+    console.log("Você perdeu");
+    alert('Você perdeu :( tente novamente!');
+    window.location += '';
+}
+
+/**
+ * @param {Phaser.Sprite} player
+ * @param {Phaser.Sprite} energy
+ */
+Level.prototype.playerGetEnergy = function(player, energy) {
+    // when the player overlaps with a energy
+    // just remove the energy from the game,
+    // you can add a better effect later
+    energy.kill();
+    
+	// # Função pra regular o tempo
+	// incrementa X no tempo que falta
+	this.endTime += (1000 * 3);
+};
+
+Level.prototype.playerGetKey = function(player, key) {
+	console.log('PEGOU A CHAVE!');
+	console.log(this);
+	
+	key.kill();
+	
+	// @ignore
+	this.scene.fEnergy.children.forEach( function(energy) { energy.kill(); });
+	
+	console.log(this.scene.fPortal.children.forEach( function(portal) { portal.alpha = '1.0'; } ));
+	
+};
+
+
+function convertToPercent(valor) {
+	return valor * 100 / tempoInicial;
+}
+
+
+Level.prototype.playerFoundPortal = function(player, portal) {
+	alert('Você zerou o jogo!')
+    window.location += ''
+	portal.kill()
+};
+
+
+Level.prototype.apagaMapa = function (tempoRestante) {
+	let valorOpacidade = convertToPercent(tempoRestante).toFixed(0);
+
+	if(valorOpacidade < 100 && valorOpacidade > 50) {
+		console.log('musica 2')
+		//this.game.sound.play('musica2', 1, true);
+	}
+	
+	
+	if(tempoRestante >= 5000) {
+		console.warn('MAIOR');
+		return 1;
+	}
+	console.warn('MENOR');
+	return valorOpacidade / 100;
+	
+}
 
 /* --- end generated code --- */
 // -- user code here --
 Level.prototype.update = function() {
+	
+	
+	// catch when the player overlaps with a energy
+	this.physics.arcade.overlap(this.scene.fRobin, this.scene.fEnergy, 
+	        this.playerGetEnergy, null, this);
+	// catch when the player overlaps with a Key
+	this.physics.arcade.overlap(this.scene.fRobin, this.scene.fKey, 
+	        this.playerGetKey, null, this);
+	// catch when the player overlaps with a Portal
+	this.physics.arcade.overlap(this.scene.fRobin, this.scene.fPortal, 
+	        this.playerFoundPortal, null, this);
+
+	
+	// Pega o tempo que falta e tira o tempo de agora pra ter a string que a gente quer =)
+    let timeLeft = this.endTime - this.time.now;
+    this.game.debug.text("Energia Restante: " + convertToPercent(timeLeft).toFixed(0) + "%" , 32, 32);
+    
+	console.log(this.scene.fLevel.alpha = this.apagaMapa(timeLeft))
+    
 
 	this.physics.arcade.collide(this.scene.fRobin, this.scene.fCollisionLayer);
+	//this.physics.arcade.collide(this.scene.fZelda, this.scene.fCollisionLayer);
+
+	
+	
+
 
 	if (this.cursors.left.isDown) {
 		console.log('moveLeft');
+	
 		// move to the left
-		this.scene.fRobin.body.velocity.x = -50;
+		this.scene.fRobin.play("moveLeft");
+		this.scene.fRobin.body.velocity.x = -200;
 	} else if (this.cursors.right.isDown) {
 		console.log('moveRight');
 		// move to the right
-		this.scene.fRobin.body.velocity.x = 50;
+		this.scene.fRobin.play("moveRight");
+		this.scene.fRobin.body.velocity.x = 200;
 	} else if (this.cursors.up.isDown) {
 		console.log('moveUp');
-		this.scene.fRobin.body.velocity.y = -50;
-
+		this.scene.fRobin.play("moveUp");
+		this.scene.fRobin.body.velocity.y = -200;
 	}  else if (this.cursors.down.isDown) {
 		console.log('moveDown');
 		this.scene.fRobin.play("moveDown");
-		this.scene.fRobin.body.velocity.y = 50;
+		this.scene.fRobin.body.velocity.y = 200;
 	} else {
 		
 		console.log('stopMove');
-		this.scene.fRobin.play("iddle");
+		//this.scene.fRobin.play("iddle");
 		this.scene.fRobin.body.velocity.x = 0;
 		this.scene.fRobin.body.velocity.y = 0;
 	}
 	
-	// update the facing of the player
-	if (this.cursors.down.isDown) {
-	    // face left
-	    //this.scene.fRobin.scale.x = 1;
-	} else if (this.cursors.down.isDown) {
-	   // face right
-	   //this.scene.fRobin.scale.x = -1;
-	}
-
-	// a flag to know if the player is (down) touching the platforms
-	//var touching = this.scene.fZelda.body.touching;
-	//console.log(touching.down)
 	
+	console.log(timeLeft)
+    if(timeLeft < 0) {
+    	fadePicture()
+    }
 	
-	
-//	if (touching) {
-//		//console.log('Mexendo')
-//	    if (this.scene.fZelda.body.velocity.x == 0 && this.scene.fZelda.body.velocity.y == 0) {
-//	        // if it is not moving horizontally play the idle
-//	        this.scene.fZelda.play("idle");
-//	        //console.log('PARADO')
-//	    } else {
-//	        // if it is moving play the walk
-//	        
-//	    	this.scene.fZelda.play("walk");
-//	    }
-//	} else {
-//	    // it is not touching the platforms so it means it is jumping.
-//	    //this.scene.fZelda.play("jump");
-//	}
-
 };
