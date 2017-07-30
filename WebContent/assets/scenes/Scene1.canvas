@@ -671,6 +671,16 @@
                   },
                   {
                     "type": "spritesheet",
+                    "id": "b7b268b7-06a0-44a5-ab5e-f088e23cb736",
+                    "asset": "3",
+                    "info": {
+                      "editorName": "zelda10",
+                      "x": 74,
+                      "y": 466
+                    }
+                  },
+                  {
+                    "type": "spritesheet",
                     "id": "7a91f311-3c32-4066-963b-58cdb6db6232",
                     "asset": "3",
                     "info": {
@@ -719,16 +729,6 @@
                     "y": 531
                   }
                 }]
-              }
-            },
-            {
-              "type": "spritesheet",
-              "id": "b7b268b7-06a0-44a5-ab5e-f088e23cb736",
-              "asset": "3",
-              "info": {
-                "editorName": "zelda10",
-                "x": 74,
-                "y": 466
               }
             }
           ]

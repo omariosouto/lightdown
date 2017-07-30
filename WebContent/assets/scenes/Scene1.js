@@ -169,6 +169,8 @@ function Scene1(aGame, aParent, aName, aAddToStage, aEnableBody, aPhysicsBodyTyp
 	
 	this.game.add.sprite(564, 524, 'zelda', 0, _energy);
 	
+	this.game.add.sprite(74, 466, 'zelda', 0, _energy);
+	
 	this.game.add.sprite(504, 53, 'zelda', 0, _energy);
 	
 	var _portal = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
@@ -179,8 +181,6 @@ function Scene1(aGame, aParent, aName, aAddToStage, aEnableBody, aPhysicsBodyTyp
 	var _key = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
 	
 	this.game.add.sprite(698, 531, 'zelda', 4, _key);
-	
-	this.game.add.sprite(74, 466, 'zelda', 0, this);
 	
 	// public fields
 	
