@@ -87,7 +87,7 @@ Level.prototype.playerGetEnergy = function(player, energy) {
     
 	// # Função pra regular o tempo
 	// incrementa X no tempo que falta
-	this.endTime += (1000 * 3);
+	this.endTime += (1600 * 3);
 };
 
 Level.prototype.playerGetKey = function(player, key) {
